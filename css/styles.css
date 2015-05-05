@@ -57,7 +57,7 @@ body {
 	color: #000;
 	position: relative;
 	text-decoration: none;
-	margin: 1.1rem auto;
+	margin: 0 auto 1.1rem;
 	padding: 0;
 	width: 250px
 }
@@ -140,8 +140,9 @@ body {
 }
 
 #quote__container {
-	margin-top: 35vh;
-	margin-bottom: 15vh;
+	margin-top: 20vh;
+	margin-bottom: 5vh;
+	font-size: .7em;
 }
 
 .quote {
@@ -170,6 +171,11 @@ body {
 #emailList h5 {
 	margin: 0;
 }
+
+label {
+		font-size: .7em;
+	}
+
 
 /* CALENDAR */
 
@@ -382,6 +388,14 @@ body {
 	  transform: scaleX(1);
 	}
 
+	#quote__container {
+	margin-top: 35vh;
+	margin-bottom: 15vh;
+	font-size: 1em;
+	}
+	label {
+		font-size: 1em;
+	}
 
 }
 
