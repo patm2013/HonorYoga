@@ -1,3 +1,28 @@
+$(document).ready(function(){
+	  //Smooth Scroll
+  	$('a[href*=#]:not([href=#])').click(function() {
+	    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') || location.hostname == this.hostname) {
+	        var target = $(this.hash);
+	        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+	           if (target.length) {
+	             $('html,body').animate({
+	                 scrollTop: target.offset().top-84
+	            }, 1000);
+	            return false;
+	        }
+	    }
+	});
+
+  	var btnMenu = $("#btnMenu");
+  	$(btnMenu).click(function() {
+
+  		$(".menuHide").slideToggle();
+
+  	});
+});
+
+
+
 //google calendar API config, more instructions at fullcalendar.io
 var googleAPI = {
   key: 'AIzaSyAr_hAppk2L0YHNiHIxF_EclOmh1WCtCB4', // typically like Gtg-rtZdsreUr_fLfhgPfgff
@@ -43,7 +68,7 @@ function event(googleEvent) {
   this.strDate = this.date.format("MM-DD-YY");
   this.strStartTime = this.date.format("h:mm");
   this.strEndTime = this.endDate.format("h:mma");
-};
+}
 
 //wrapper function so that it doesn't go off before we get google's response. 
 //After we receive the response, it is formatted (eventArray function) and passed here.
@@ -94,7 +119,7 @@ var makeCalendar = function(events){
 var activeDate = {
   //cache the old date class and set the new date class
   update: function(newDate) {
-    this.prev = this.active
+    this.prev = this.active;
     this.active = '#' + newDate;
   },
   //toggle the active class on the previous and new dates
