@@ -44,7 +44,8 @@ $.ajax({
         //addUpcomingEvents(formattedEvents);
     },
     error: function(response) {
-        alert("An Error Has Occured");
+        $("#calText").text("Oops! Couldn't load the calendar!");
+        $("#calText").after("<a href='https://www.google.com/calendar/embed?src=honoryogastudio.com_0akmqote5aq0tujambs20ja5l0%40group.calendar.google.com&ctz=America/Chicago'> Click here to see it! </a>");
     }
 });
 
