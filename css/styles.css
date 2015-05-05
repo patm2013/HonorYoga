@@ -10,20 +10,23 @@ body {
 	min-height: 100vh;
 }
 
-.page:first-child {
-	padding: 0;
-}
 
 .container {
 	height: inherit;
 }
-.bg-black {
-	color: #CCC;
-	background: #000;
-	text-align: center;
-}
-/*navbar positioning*/
 
+.bg-accent{
+	background-color: #73889d;
+	color: #FFF;
+	position: relative;
+	padding: 4rem 0;
+}
+
+.transparent {
+	opacity: 0;
+}
+
+/*navbar positioning*/
 #nav {
 	position: fixed;
 	top: 0;
@@ -133,40 +136,6 @@ body {
 	right: 15px;
 }
 
-
-/* LANDING */
-#logo {
-	float: left;
-	margin: auto;
-	height: auto;
-}
-
-#logo path {
-	stroke: #FFF;
-}
-
-#logoHeader {
-	float: left;
-	margin: auto;
-	height: 60px;
-	width: auto;
-	position: absolute;
-	left: 15px;
-
-}
-
-@media (min-width: 750px) {
-	#logoHeader {
-	float: left;
-	margin: auto;
-	height: 60px;
-	width: auto;
-	position: static;
-	}
-}
-#logoHeader path {
-	stroke: #000;
-}
 .menuHide {
 	display: none;
 	width: 100%;
@@ -188,8 +157,30 @@ body {
 		display: none;
 	}
 }
-/* LARGE PIC */
 
+#logoHeader {
+	float: left;
+	margin: auto;
+	height: 60px;
+	width: auto;
+	position: absolute;
+	left: 15px;
+
+}
+@media (min-width: 750px) {
+	#logoHeader {
+	float: left;
+	margin: auto;
+	height: 60px;
+	width: auto;
+	position: static;
+	}
+}
+#logoHeader path {
+	stroke: #000;
+}
+
+/* LANDING */
 #summary {
 	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.75)), url('../images/yogahandsComp.jpg');
 	background-position: center right;
@@ -198,14 +189,6 @@ body {
 
 }
 
-#w2e {
-	background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.75)), url('../images/studioComp.jpg');
-	background-position: bottom;
-	background-size: cover;
-}
-#logo__container {
-	margin-top: 35vh;
-}
 #quote__container {
 	margin-top: 35vh;
 	margin-bottom: 15vh;
@@ -224,10 +207,7 @@ body {
 	font-size: 1.35em;
 }
 
-.transparent {
-	opacity: 0;
-}
-
+/* EMAIL */
 #form input {
 	background: none;
 	color: #FFF;
@@ -236,20 +216,16 @@ body {
 #form input:focus {
 	border-color: #FFF;
 }
-/* CALENDAR */
+
 #emailList h5 {
 	margin: 0;
 }
 
+/* CALENDAR */
 .clndr {
 	width: 100%;
 	text-align: center;
 }
-
-.clndr-previous-button, .month, .clndr-next-button, .event {
-
-}
-
 
 .clndr-previous-button, .month, .clndr-next-button, .day-header, .day {
 	display: inline-block;
@@ -268,9 +244,11 @@ body {
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
+
 .adjacent-month {
 	color: #ddd;
 }
+
 .day {
 	width: 14.28%;
 	padding: 4%;
@@ -308,9 +286,6 @@ body {
 	color: #FFF;
 }
 
-.calendar-dow-0 {
-}
-
 #eventList {
 	height: 355px;
 	overflow: auto;
@@ -325,29 +300,16 @@ body {
     -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
 }
 
-
 .calendar {
 	border: 4px solid #73889d;
 }
 
-/* EMAIL */
-.bg-accent{
-	background-color: #73889d;
-	color: #FFF;
-	position: relative;
-	padding: 4rem 0;
-}
 
-.bg-accent-blue {
-	background-color: #008576;
-	color: #FFF;
-	position: relative;
-	padding: 4rem 0;
-	
-}
-
-input {
-	color: #000;
+/* WHAT TO EXPECT */
+#w2e {
+	background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.75)), url('../images/studioComp.jpg');
+	background-position: bottom;
+	background-size: cover;
 }
 
 /* INSTRUCTORS */
