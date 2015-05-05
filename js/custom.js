@@ -1,4 +1,6 @@
 $(document).ready(function(){
+
+	var nav = $("#nav");
 	  //Smooth Scroll
   	$('a[href*=#]:not([href=#])').click(function() {
 	    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') || location.hostname == this.hostname) {
@@ -6,7 +8,7 @@ $(document).ready(function(){
 	        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
 	           if (target.length) {
 	             $('html,body').animate({
-	                 scrollTop: target.offset().top-84
+	                 scrollTop: target.offset().top-nav.height()+1
 	            }, 1000);
 	            return false;
 	        }
