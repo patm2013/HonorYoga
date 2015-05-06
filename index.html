@@ -142,15 +142,8 @@
                 <p>All classes are $10 each. We are currently accepting cash or check payable at the time of your class.</p>
             </div>
         </div>
-        <div class="row">
-            <div class="columns six">
-                <h5>Vinyasa Flow</h5>
-                <p>An active form of yoga, Vinyasa Flow coordinates breath and movement. This class includes simple movements and gentle stretching to increase range of motion and flexibility. Poses are held for several breaths to achieve proper alignment, and full benefit of the pose. It is an ideal class for beginners, as well as practiced yogis, as it will help muscle/joint pain, stiffness, weakness and fatigue. Depending on the instructor, the flow can be quick or slower paced.</p>
-            </div>
-            <div class="columns six">
-                <h5>Power Flow</h5>
-                <p>Power yoga uses the methodology of a Vinyasa Flow class, but tends to be a bit more challenging incorporating slightly more advanced poses. Just as in Vinyasa Flow, students are asked to hold poses for a series of breaths to gain strength and flexibility. Power Flow doesn’t follow a set series, so each class will vary. All of our instructors know modifications, but it is helpful to have a basic yoga knowledge for Power Flow.</p>
-            </div>
+        <div class="row" id="gClasses">
+            
         </div>
     </div>
 </div>
@@ -287,6 +280,17 @@
 
 
 <!-- - - - - - - - - JS Templates - - - - - - - - - - - -->
+
+<!-- CLASS TEMPLATE -->
+<script id="class-template" type="text/template">
+    <% _.each(ttClasses, function(ttClass) { %>
+      <div class="columns six">
+        <h5><%= ttClass.className %></h5>
+        <p><%= ttClass.classDescription %></p>
+      </div>
+    <% }); %>
+</script>
+
 <!-- CALENDAR TEMPLATE -->
 <script id="calendar-template" type="text/template">
   <div class="controls">
